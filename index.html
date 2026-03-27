@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asif Khan | Web Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f2027;
+color:#fff;
+}
+
+/* Navbar */
+header{
+position:fixed;
+width:100%;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#111;
+z-index:1000;
+}
+
+header h2{
+color:#00f2ff;
+}
+
+nav a{
+color:#ffffff;
+margin-left:20px;
+text-decoration:none;
+font-size:14px;
+}
+
+/* Section */
+section{
+padding:100px 8%;
+}
+
+/* Hero */
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:40px;
+}
+
+.hero-text{
+flex:1;
+min-width:280px;
+}
+
+.hero-text h1{
+font-size:42px;
+}
+
+.highlight{
+color:#00f2ff;
+}
+
+/* PROFILE IMAGE */
+.hero-img{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+.hero-img img{
+width:100%;
+max-width:240px;
+height:auto;
+border-radius:50%;
+border:4px solid #00f2ff;
+object-fit:cover;
+}
+
+/* About */
+.about{
+max-width:800px;
+margin:auto;
+text-align:center;
+line-height:1.7;
+color:#cccccc;
+}
+
+/* Skills */
+.skills{
+text-align:center;
+}
+
+.skills-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:15px;
+margin-top:25px;
+}
+
+.skill{
+background:#1b2a33;
+padding:15px;
+border-radius:8px;
+font-size:14px;
+transition:0.3s;
+}
+
+/* Only small animation – no colour change */
+.skill:hover{
+transform:scale(1.05);
+border:1px solid #00f2ff;
+}
+
+/* PROJECTS */
+.projects{
+text-align:center;
+}
+
+.projects-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.project-card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:15px;
+transition:0.3s;
+text-align:left;
+}
+
+/* Mobile touch effect */
+.project-card:active{
+transform:scale(0.97);
+}
+
+/* Desktop hover only */
+.project-card:hover{
+transform:translateY(-6px);
+border:1px solid #00f2ff;
+}
+
+.project-card h3{
+margin-bottom:10px;
+}
+
+.project-card p{
+font-size:14px;
+line-height:1.6;
+}
+
+.project-links{
+margin-top:15px;
+}
+
+.project-links a{
+text-decoration:none;
+margin-right:10px;
+color:#00f2ff;
+font-weight:600;
+font-size:14px;
+}
+
+/* Education */
+.education{
+text-align:center;
+color:#ccc;
+}
+
+/* Contact */
+.contact form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact input, .contact textarea{
+padding:12px;
+border-radius:6px;
+border:none;
+font-size:14px;
+}
+
+.contact button{
+padding:12px;
+border:none;
+background:#00f2ff;
+font-weight:600;
+cursor:pointer;
+}
+
+/* Footer */
+footer{
+text-align:center;
+padding:15px;
+background:#111;
+color:#00f2ff;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.hero{
+flex-direction:column-reverse;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:28px;
+}
+
+.hero-img img{
+max-width:180px;
+}
+
+/* Mobile Menu */
+#menu-btn{
+display:block;
+}
+
+nav{
+position:absolute;
+top:60px;
+right:0;
+background:#111;
+width:200px;
+display:none;
+flex-direction:column;
+padding:15px;
+}
+
+nav a{
+display:block;
+margin:10px 0;
+}
+
+nav.active{
+display:flex;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>Asif Khan</h2>
+
+<div id="menu-btn" style="font-size:22px; cursor:pointer; display:none;">
+<i class="fa-solid fa-bars"></i>
+</div>
+
+<nav id="navbar">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+
+<div class="hero-text">
+<h1>Hi, I'm <span class="highlight">Asif Khan</span></h1>
+<p style="margin-top:10px;color:#ccc;">
+Computer Science Engineering Student & Passionate Web Developer
+</p>
+
+<div style="margin-top:15px; font-size:20px;">
+<a href="mailto:khanasif60006@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+&nbsp;&nbsp;
+<a href="https://github.com/ASIF-KHAN62" target="_blank"><i class="fa-brands fa-github"></i></a>
+&nbsp;&nbsp;
+<a href="https://www.linkedin.com/in/asif-khan-a461a8329" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+</div>
+
+<div style="margin-top:20px;">
+<a href="cv.png" style="background:#00f2ff; padding:10px 18px; text-decoration:none; color:black; font-weight:600; border-radius:6px;">
+Download CV
+</a>
+</div>
+</div>
+
+<div class="hero-img">
+<img src="p.jpeg" alt=" Profile Photo">
+</div>
+</section>
+
+<!-- About -->
+<section id="about">
+<h2 style="text-align:center;">About Me</h2>
+<p class="about">
+I am a dedicated Computer Science Engineering student at IK Gujral Punjab Technical University (2024-2028). 
+I am passionate about web development and building clean, responsive, and user-friendly websites. 
+My goal is to grow as a Full Stack Developer and continuously improve my technical skills.
+</p>
+</section>
+
+<!-- Skills -->
+<section class="skills" id="skills">
+<h2>Technical Skills</h2>
+
+<div class="skills-container">
+<div class="skill"><i class="fa-brands fa-html5"></i> HTML</div>
+<div class="skill"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+<div class="skill"><i class="fa-brands fa-js"></i> JavaScript</div>
+<div class="skill"><i class="fa-brands fa-python"></i> Python</div>
+<div class="skill">C</div>
+<div class="skill">C++</div>
+<div class="skill">ADCA</div>
+</div>
+
+</section>
+
+<!-- Projects -->
+<section class="projects" id="projects">
+<h2>My Projects</h2>
+
+<div class="projects-container">
+
+<div class="project-card">
+<h3>Tic-Tac-Toe Game</h3>
+<p>
+A responsive Tic-Tac-Toe game developed using HTML, CSS, and JavaScript with animations and modern UI design.
+</p>
+<div class="project-links">
+<a href="Tic-Tac-Toe by Asif khan.apk" target="_blank">Live Demo</a>
+<a href="#">GitHub Code</a>
+</div>
+</div>
+
+<div class="project-card">
+<h3>Student Portfolio Website</h3>
+<p>
+A modern personal portfolio website created using HTML and CSS. Fully responsive design for mobile and laptop.
+</p>
+<div class="project-links">
+<a href="#">Live Demo</a>
+<a href="#">GitHub Code</a>
+</div>
+</div>
+
+<div class="project-card">
+<h3>Online Safety App for Girls</h3>
+<p>
+A student safety application idea with alert system, location sharing, and emergency contact features.
+</p>
+<div class="project-links">
+<a href="#">Live Demo</a>
+<a href="#">GitHub Code</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Education -->
+<section class="education" id="education">
+<h2>Education</h2>
+<p style="margin-top:15px;">
+🎓 B.Tech in Computer Science Engineering <br>
+IK Gujral Punjab Technical University <br>
+2024 – 2028
+</p>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+<h2 style="text-align:center;">Contact Me</h2>
+<form action="mailto:khanasif60006@gmail.com" method="post" enctype="text/plain">
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="email" name="Email" placeholder="Your Email" required>
+<textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+</section>
+
+<footer>
+Asif Khan | Web Developer
+</footer>
+
+<script>
+const menuBtn = document.getElementById("menu-btn");
+const navbar = document.getElementById("navbar");
+
+menuBtn.onclick = () => {
+navbar.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
